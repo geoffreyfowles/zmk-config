@@ -16,7 +16,7 @@
 #define _GAMING_FN 5
 #define _NUM_FN 6
 #define _SYMBOLS_NAV 7
-#define _MOUSE_MEDIA_MODS 8
+#define _MOUSE_MEDIA 8
 #define _SHORTCUTS 9
 #define _CONFIG 10
 
@@ -69,6 +69,62 @@
             layers = <_DEFAULT>;
         };
 
+        combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <13 25>;  // home and bottom left pinky
+            bindings = <&kp LGUI>;
+            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
+        };
+
+        combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <14 26>;  // home and bottom left ring
+            bindings = <&kp LALT>;
+            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
+        };
+
+        combo_lctrl {
+            timeout-ms = <50>;
+            key-positions = <15 27>;  // home and bottom left middle
+            bindings = <&kp LCTRL>;
+            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
+        };
+
+        combo_lshft {
+            timeout-ms = <50>;
+            key-positions = <16 28>;  // home and bottom left index
+            bindings = <&kp LSHFT>;
+            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
+        };
+
+        combo_rshft {
+            timeout-ms = <50>;
+            key-positions = <19 31>;  // home and bottom right index
+            bindings = <&kp RSHFT>;
+            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
+        };
+
+        combo_rctrl {
+            timeout-ms = <50>;
+            key-positions = <20 32>;  // home and bottom right middle
+            bindings = <&kp RCTRL>;
+            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
+        };
+
+        combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <21 33>;  // home and bottom right ring
+            bindings = <&kp RALT>;
+            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
+        };
+
+        combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <22 34>;  // home and bottom right pinky
+            bindings = <&kp RGUI>;
+            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
+        };
+
         combo_gaming_mirrored {
             timeout-ms = <50>;
             key-positions = <37 38>;  // home and right left thumb
@@ -94,21 +150,21 @@
 
         default {
             bindings = <
-                &none &kp Q      &kp W      &kp F       &kp P       &kp B /**/ &kp J &kp L       &kp U       &kp Y      &kp SEMI   &none
-                &none &mt LGUI A &mt LALT R &mt LCTRL S &mt LSHFT T &kp G /**/ &kp M &mt RSHFT N &mt RCTRL E &mt RALT I &mt RGUI O &none
-                &none &kp Z      &kp X      &kp C       &kp D       &kp V /**/ &kp K &kp H       &kp COMMA   &kp DOT    &kp FSLH   &none
+                &none &kp Q &kp W &kp F &kp P &kp B /**/ &kp J &kp L &kp U     &kp Y   &kp SEMI &none
+                &none &kp A &kp R &kp S &kp T &kp G /**/ &kp M &kp N &kp E     &kp I   &kp O    &none
+                &none &kp Z &kp X &kp C &kp D &kp V /**/ &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &kp LSHFT &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA_MODS ENTER &lt _SYMBOLS_NAV BSPC &kp RSHFT
+                &kp LSHFT &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYMBOLS_NAV BSPC &kp RSHFT
             >;
         };
 
         default_mirrored {
             bindings = <
-                &none &kp SEMI   &kp Y      &kp U       &kp L       &kp J /**/ &kp B &kp P       &kp F       &kp W      &kp Q      &none
-                &none &mt RGUI O &mt RALT I &mt RCTRL E &mt RSHFT N &kp M /**/ &kp G &mt LSHFT T &mt LCTRL S &mt LALT R &mt LGUI A &none
-                &none &kp FSLH   &kp DOT    &kp COMMA   &kp H       &kp K /**/ &kp V &kp D       &kp C       &kp X      &kp Z      &none
+                &none &kp SEMI &kp Y   &kp U     &kp L &kp J /**/ &kp B &kp P &kp F &kp W &kp Q &none
+                &none &kp O    &kp I   &kp E     &kp N &kp M /**/ &kp G &kp T &kp S &kp R &kp A &none
+                &none &kp FSLH &kp DOT &kp COMMA &kp H &kp K /**/ &kp V &kp D &kp C &kp X &kp Z &none
                 /* thumb keys */
-                &kp RSHFT &lt _SYMBOLS_NAV BSPC &lt _MOUSE_MEDIA_MODS ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &kp LSHFT
+                &kp RSHFT &lt _SYMBOLS_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &kp LSHFT
             >;
         };
 
@@ -154,9 +210,9 @@
 
         num_fn {
             bindings = <
-                &none &kp F11      &kp F9      &kp F8       &kp F7       &trans /**/ &trans &kp N7 &kp N8 &kp N9 &trans &none
-                &none &mt LGUI F10 &mt LALT F6 &mt LCTRL F5 &mt LSHFT F4 &trans /**/ &trans &kp N4 &kp N5 &kp N6 &kp N0 &none
-                &none &kp F12      &kp F3      &kp F2       &kp F1       &trans /**/ &trans &kp N1 &kp N2 &kp N3 &trans &none
+                &none &kp F11 &kp F9 &kp F8 &kp F7 &trans /**/ &trans &kp N7 &kp N8 &kp N9 &trans &none
+                &none &kp F10 &kp F6 &kp F5 &kp F4 &trans /**/ &trans &kp N4 &kp N5 &kp N6 &kp N0 &none
+                &none &kp F12 &kp F3 &kp F2 &kp F1 &trans /**/ &trans &kp N1 &kp N2 &kp N3 &trans &none
                 /* thumb keys */
                 &trans &trans &trans /**/ &trans &trans &kp KP_DOT
             >;
@@ -164,19 +220,19 @@
 
         symbols_nav {
             bindings = <
-                &none &kp PLUS       &kp EQUAL      &kp LBRC       &kp RBRC       &trans   /**/ &kp INS  &kp PSCRN &kp SLCK  &kp PAUSE_BREAK &kp K_APP &none
-                &none &mt LGUI UNDER &mt LALT MINUS &mt LCTRL LPAR &mt LSHFT RPAR &kp BSLH /**/ &kp LEFT &kp DOWN  &kp UP    &kp RIGHT       &kp SQT   &none
-                &none &kp TILDE      &kp GRAVE      &kp LBKT       &kp RBKT       &kp PIPE /**/ &kp HOME &kp PG_DN &kp PG_UP &kp END         &kp DQT   &none
+                &none &kp PLUS  &kp EQUAL &kp LBRC &kp RBRC &trans   /**/ &kp INS  &kp PSCRN &kp SLCK  &kp PAUSE_BREAK &kp K_APP &none
+                &none &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp BSLH /**/ &kp LEFT &kp DOWN  &kp UP    &kp RIGHT       &kp SQT   &none
+                &none &kp TILDE &kp GRAVE &kp LBKT &kp RBKT &kp PIPE /**/ &kp HOME &kp PG_DN &kp PG_UP &kp END         &kp DQT   &none
                 /* thumb keys */
                 &trans &trans &trans /**/ &trans &trans &trans
             >;
         };
 
-        mouse_media_mods {
+        mouse_media{
             bindings = <
                 &none &trans &trans &trans &trans &trans /**/ &trans     &kp C_BRI_DN &kp C_BRI_UP &trans     &trans   &none
-                &none &trans &trans &trans &trans &trans /**/ &trans     &kp RSHFT    &kp RCTRL    &kp RALT   &kp RGUI &none
                 &none &trans &trans &trans &trans &trans /**/ &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP &none
+                &none &trans &trans &trans &trans &trans /**/ &trans     &trans       &trans       &trans     &trans   &none
                 /* thumb keys */
                 &trans &trans &trans /**/ &trans &trans &trans
             >;
