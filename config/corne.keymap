@@ -39,13 +39,6 @@
             bindings = <&mo _CONFIG>;
         };
 
-        combo_lock {
-            timeout-ms = <50>;
-            key-positions = <4 5>;  // inner top and top left index
-            bindings = <&kp LG(L)>;
-            layers = <_DEFAULT>;
-        };
-
         combo_search_button {
             timeout-ms = <50>;
             key-positions = <16 17>;  // inner home and home left index
@@ -186,7 +179,7 @@
                 &none &kp A &kp R &kp S &kp T &kp G /**/ &kp M &kp N &kp E     &kp I   &kp O    &none
                 &none &kp Z &kp X &kp C &kp D &kp V /**/ &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &kp LSHFT &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYMBOLS_NAV BSPC &kp RSHFT
+                &mt LG(L) ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYMBOLS_NAV BSPC &kp DEL
             >;
         };
 
@@ -196,7 +189,7 @@
                 &none &kp O    &kp I   &kp E     &kp N &kp M /**/ &kp G &kp T &kp S &kp R &kp A &none
                 &none &kp FSLH &kp DOT &kp COMMA &kp H &kp K /**/ &kp V &kp D &kp C &kp X &kp Z &none
                 /* thumb keys */
-                &kp RSHFT &lt _SYMBOLS_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &kp LSHFT
+                &kp DEL &lt _SYMBOLS_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &mt LG(L) ESC
             >;
         };
 
