@@ -42,6 +42,13 @@
             layers = <_DEFAULT>;
         };
 
+        combo_search_button {
+            timeout-ms = <50>;
+            key-positions = <16 17>;  // inner home and home left index
+            bindings = <&kp C_AC_SEARCH>;
+            layers = <_DEFAULT>;
+        };
+
         combo_caps_word {
             timeout-ms = <50>;
             key-positions = <37 40>;  // home thumbs
