@@ -45,131 +45,112 @@
         compatible = "zmk,combos";
 
         combo_config {
-            timeout-ms = <50>;
             key-positions = <36 41>;  // inner thumbs
             bindings = <&mo _CONFIG>;
         };
 
         combo_search_button {
-            timeout-ms = <50>;
             key-positions = <16 17>;  // inner home and home left index
             bindings = <&kp C_AC_SEARCH>;
             layers = <_DEFAULT>;
         };
 
         combo_caps_word {
-            timeout-ms = <50>;
             key-positions = <37 40>;  // home thumbs
             bindings = <&caps_word>;
         };
 
         combo_default_mirrored {
-            timeout-ms = <50>;
             key-positions = <37 38>;  // home and outer left thumb
             bindings = <&sl _DEFAULT_MIRRORED>;
             layers = <_DEFAULT>;
         };
 
         combo_sticky_lgui {
-            timeout-ms = <50>;
             key-positions = <1 13>;  // top and home left pinky
             bindings = <&sk LGUI>;
             layers = <_DEFAULT>;
         };
 
         combo_sticky_lalt {
-            timeout-ms = <50>;
             key-positions = <2 14>;  // top and home left ring
             bindings = <&sk LALT>;
             layers = <_DEFAULT>;
         };
 
         combo_sticky_lctrl {
-            timeout-ms = <50>;
             key-positions = <3 15>;  // top and home left middle
             bindings = <&sk LCTRL>;
             layers = <_DEFAULT>;
         };
 
         combo_sticky_lshft {
-            timeout-ms = <50>;
             key-positions = <4 16>;  // top and home left index
             bindings = <&sk LSHFT>;
             layers = <_DEFAULT>;
         };
 
         combo_lgui {
-            timeout-ms = <50>;
             key-positions = <13 25>;  // home and bottom left pinky
             bindings = <&kp LGUI>;
             layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_lalt {
-            timeout-ms = <50>;
             key-positions = <14 26>;  // home and bottom left ring
             bindings = <&kp LALT>;
             layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_lctrl {
-            timeout-ms = <50>;
             key-positions = <15 27>;  // home and bottom left middle
             bindings = <&kp LCTRL>;
             layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_lshft {
-            timeout-ms = <50>;
             key-positions = <16 28>;  // home and bottom left index
             bindings = <&kp LSHFT>;
             layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_rshft {
-            timeout-ms = <50>;
             key-positions = <19 31>;  // home and bottom right index
             bindings = <&kp RSHFT>;
             layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_rctrl {
-            timeout-ms = <50>;
             key-positions = <20 32>;  // home and bottom right middle
             bindings = <&kp RCTRL>;
             layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_ralt {
-            timeout-ms = <50>;
             key-positions = <21 33>;  // home and bottom right ring
             bindings = <&kp RALT>;
             layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_rgui {
-            timeout-ms = <50>;
             key-positions = <22 34>;  // home and bottom right pinky
             bindings = <&kp RGUI>;
             layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_gaming {
-            timeout-ms = <50>;
             key-positions = <6 7>;  // inner top and top right index
             bindings = <&tog _GAMING>;
             layers = <_DEFAULT _GAMING>;
         };
 
         combo_gaming_mirrored {
-            timeout-ms = <50>;
             key-positions = <37 38>;  // home and outer left thumb
             bindings = <&sl _GAMING_MIRRORED>;
             layers = <_GAMING>;
         };
 
         combo_gaming_alt {
-            timeout-ms = <50>;
             key-positions = <36 37>;  // inner and home left thumb
             bindings = <&kp LALT>;
             layers = <_GAMING>;
