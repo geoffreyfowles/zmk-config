@@ -73,7 +73,7 @@
         COMBO_MOD(RALT, 21 33)
         COMBO_MOD(RGUI, 22 34)
 
-        combo_search_button {
+        combo_search_key {
             key-positions = <16 17>;  // inner home and home left index
             bindings = <&kp C_AC_SEARCH>;
             layers = <_DEFAULT>;
