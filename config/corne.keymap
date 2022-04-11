@@ -21,6 +21,20 @@
 #define _SHORTCUTS 9
 #define _CONFIG 10
 
+#define COMBO_STICKY_MOD(MOD, KEY_POSITIONS) \
+    combo_sticky_mod_##MOD { \
+        bindings = <&sk MOD>; \
+        key-positions = <KEY_POSITIONS>; \
+        layers = <_DEFAULT>; \
+    };
+
+#define COMBO_MOD(MOD, KEY_POSITIONS) \
+    combo_mod_##MOD { \
+        bindings = <&kp MOD>; \
+        key-positions = <KEY_POSITIONS>; \
+        layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>; \
+    };
+
 &sk {
     release-after-ms = <2000>;
 };
@@ -44,10 +58,20 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_config {
-            key-positions = <36 41>;  // inner thumbs
-            bindings = <&mo _CONFIG>;
-        };
+        COMBO_STICKY_MOD(LGUI, 1 13)
+        COMBO_STICKY_MOD(LALT, 2 14)
+        COMBO_STICKY_MOD(LCTRL, 3 15)
+        COMBO_STICKY_MOD(LSHFT, 4 16)
+
+        COMBO_MOD(LGUI, 13 25)
+        COMBO_MOD(LALT, 14 26)
+        COMBO_MOD(LCTRL, 15 27)
+        COMBO_MOD(LSHFT, 16 28)
+
+        COMBO_MOD(RSHFT, 19 31)
+        COMBO_MOD(RCTRL, 20 32)
+        COMBO_MOD(RALT, 21 33)
+        COMBO_MOD(RGUI, 22 34)
 
         combo_search_button {
             key-positions = <16 17>;  // inner home and home left index
@@ -55,87 +79,26 @@
             layers = <_DEFAULT>;
         };
 
+        combo_config {
+            key-positions = <36 41>;  // inner thumbs
+            bindings = <&mo _CONFIG>;
+        };
+
         combo_caps_word {
             key-positions = <37 40>;  // home thumbs
             bindings = <&caps_word>;
         };
 
-        combo_default_mirrored {
+        combo_default_mirrored_l {
             key-positions = <37 38>;  // home and outer left thumb
             bindings = <&sl _DEFAULT_MIRRORED>;
             layers = <_DEFAULT>;
         };
 
-        combo_sticky_lgui {
-            key-positions = <1 13>;  // top and home left pinky
-            bindings = <&sk LGUI>;
+        combo_default_mirrored_r {
+            key-positions = <39 40>;  // home and outer right thumb
+            bindings = <&sl _DEFAULT_MIRRORED>;
             layers = <_DEFAULT>;
-        };
-
-        combo_sticky_lalt {
-            key-positions = <2 14>;  // top and home left ring
-            bindings = <&sk LALT>;
-            layers = <_DEFAULT>;
-        };
-
-        combo_sticky_lctrl {
-            key-positions = <3 15>;  // top and home left middle
-            bindings = <&sk LCTRL>;
-            layers = <_DEFAULT>;
-        };
-
-        combo_sticky_lshft {
-            key-positions = <4 16>;  // top and home left index
-            bindings = <&sk LSHFT>;
-            layers = <_DEFAULT>;
-        };
-
-        combo_lgui {
-            key-positions = <13 25>;  // home and bottom left pinky
-            bindings = <&kp LGUI>;
-            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
-        };
-
-        combo_lalt {
-            key-positions = <14 26>;  // home and bottom left ring
-            bindings = <&kp LALT>;
-            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
-        };
-
-        combo_lctrl {
-            key-positions = <15 27>;  // home and bottom left middle
-            bindings = <&kp LCTRL>;
-            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
-        };
-
-        combo_lshft {
-            key-positions = <16 28>;  // home and bottom left index
-            bindings = <&kp LSHFT>;
-            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
-        };
-
-        combo_rshft {
-            key-positions = <19 31>;  // home and bottom right index
-            bindings = <&kp RSHFT>;
-            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
-        };
-
-        combo_rctrl {
-            key-positions = <20 32>;  // home and bottom right middle
-            bindings = <&kp RCTRL>;
-            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
-        };
-
-        combo_ralt {
-            key-positions = <21 33>;  // home and bottom right ring
-            bindings = <&kp RALT>;
-            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
-        };
-
-        combo_rgui {
-            key-positions = <22 34>;  // home and bottom right pinky
-            bindings = <&kp RGUI>;
-            layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>;
         };
 
         combo_gaming {
@@ -156,10 +119,6 @@
             layers = <_GAMING>;
         };
 
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
     };
 
     macros {
