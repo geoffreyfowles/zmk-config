@@ -39,6 +39,10 @@
     release-after-ms = <2000>;
 };
 
+&lt {
+    flavor = "hold-preferred";
+};
+
 &caps_word {
     continue-list = <UNDER MINUS BSPC DEL>;
 };
