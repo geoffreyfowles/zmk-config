@@ -244,9 +244,9 @@
 
         shortcuts {
             bindings = <
-                _____ &trans          &kp LG(LS(LEFT)) &kp LG(UP)   &kp LG(LS(RIGHT)) &trans        /**/ &trans &kp F19 &kp F20 &kp F21 &kp F23 _____
-                _____ &kp LS(LA(TAB)) &kp LG(LEFT)     &kp LG(DOWN) &kp LG(RIGHT)     &kp LA(TAB)   /**/ &trans &kp F16 &kp F17 &kp F18 &kp F22 _____
-                _____ &trans          &trans           &kp LC(C)    &kp LC(V)         &kp LG(LS(A)) /**/ &trans &kp F13 &kp F14 &kp F15 &kp F24 _____
+                _____ &kp LG(LC(LEFT)) &kp LG(LS(LEFT)) &kp LG(UP)   &kp LG(LS(RIGHT)) &kp LG(LC(RIGHT)) /**/ &trans &kp F19 &kp F20 &kp F21 &kp F23 _____
+                _____ &kp LS(LA(TAB))  &kp LG(LEFT)     &kp LG(DOWN) &kp LG(RIGHT)     &kp LA(TAB)       /**/ &trans &kp F16 &kp F17 &kp F18 &kp F22 _____
+                _____ &trans           &trans           &kp LC(C)    &kp LC(V)         &kp LG(LS(A))     /**/ &trans &kp F13 &kp F14 &kp F15 &kp F24 _____
                 /* thumb keys */
                 &trans &trans &trans /**/ &trans &trans &trans
             >;
