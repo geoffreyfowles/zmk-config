@@ -27,7 +27,7 @@
     combo_sticky_mod_##MOD { \
         bindings = <&sk MOD>; \
         key-positions = <KEY_POSITIONS>; \
-        layers = <_DEFAULT>; \
+        layers = <_DEFAULT _DEFAULT_MIRRORED>; \
     };
 
 #define COMBO_MOD(MOD, KEY_POSITIONS) \
