@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+#define _____ trans
+
 #define _DEFAULT 0
 #define _DEFAULT_MIRRORED 1
 #define _GAMING 2
@@ -192,7 +194,7 @@
                 &kp LSHFT &kp A &kp S &kp D &kp F /**/ &kp H &kp J &kp K     &kp L   &kp SEMI
                 &kp LCTRL &kp Z &kp X &kp C &kp V /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH
                 /* thumb keys */
-                &mo _GAMING_FN &kp SPACE &mo _GAMING_NUM /**/ &trans &trans &trans
+                &mo _GAMING_FN &kp SPACE &mo _GAMING_NUM /**/ &_____ &_____ &_____
             >;
         };
 
@@ -202,77 +204,77 @@
                 &kp SEMI &kp L   &kp K     &kp J &kp H /**/ &kp F &kp D &kp S &kp A &kp LSHFT
                 &kp FSLH &kp DOT &kp COMMA &kp M &kp N /**/ &kp V &kp C &kp X &kp Z &kp LCTRL
                 /* thumb keys */
-                &trans &trans &trans /**/ &mo _GAMING_NUM &kp SPACE &mo _GAMING_FN
+                &_____ &_____ &_____ /**/ &mo _GAMING_NUM &kp SPACE &mo _GAMING_FN
             >;
         };
 
         gaming_num {
             bindings = <
-                &kp MINUS &kp N9 &kp N8 &kp N7 &kp T /**/ &trans     &kp KP_N7 &kp KP_N8 &kp KP_N9 &trans
+                &kp MINUS &kp N9 &kp N8 &kp N7 &kp T /**/ &_____     &kp KP_N7 &kp KP_N8 &kp KP_N9 &_____
                 &kp N0    &kp N6 &kp N5 &kp N4 &kp G /**/ &kp KP_NUM &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N0
-                &kp EQUAL &kp N3 &kp N2 &kp N1 &kp B /**/ &trans     &kp KP_N1 &kp KP_N2 &kp KP_N3 &trans
+                &kp EQUAL &kp N3 &kp N2 &kp N1 &kp B /**/ &_____     &kp KP_N1 &kp KP_N2 &kp KP_N3 &_____
                 /* thumb keys */
-                &trans &trans &trans /**/ &trans &trans &trans
+                &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
         };
 
         gaming_fn {
             bindings = <
-                &kp F11 &kp F9 &kp F8 &kp F7 &trans    /**/ &trans &trans &trans &trans &trans
-                &kp F10 &kp F6 &kp F5 &kp F4 &kp ESC   /**/ &trans &trans &trans &trans &trans
-                &kp F12 &kp F3 &kp F2 &kp F1 &kp GRAVE /**/ &trans &trans &trans &trans &trans
+                &kp F11 &kp F9 &kp F8 &kp F7 &_____    /**/ &_____ &_____ &_____ &_____ &_____
+                &kp F10 &kp F6 &kp F5 &kp F4 &kp ESC   /**/ &_____ &_____ &_____ &_____ &_____
+                &kp F12 &kp F3 &kp F2 &kp F1 &kp GRAVE /**/ &_____ &_____ &_____ &_____ &_____
                 /* thumb keys */
-                &trans &trans &trans /**/ &trans &trans &trans
+                &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
         };
 
         num_fn {
             bindings = <
-                &kp F11 &kp F9 &kp F8 &kp F7 &trans /**/ &trans &kp N7 &kp N8 &kp N9 &trans
-                &kp F10 &kp F6 &kp F5 &kp F4 &trans /**/ &trans &kp N4 &kp N5 &kp N6 &kp N0
-                &kp F12 &kp F3 &kp F2 &kp F1 &trans /**/ &trans &kp N1 &kp N2 &kp N3 &trans
+                &kp F11 &kp F9 &kp F8 &kp F7 &_____ /**/ &_____ &kp N7 &kp N8 &kp N9 &_____
+                &kp F10 &kp F6 &kp F5 &kp F4 &_____ /**/ &_____ &kp N4 &kp N5 &kp N6 &kp N0
+                &kp F12 &kp F3 &kp F2 &kp F1 &_____ /**/ &_____ &kp N1 &kp N2 &kp N3 &_____
                 /* thumb keys */
-                &trans &trans &trans /**/ &trans &trans &kp KP_DOT
+                &_____ &_____ &_____ /**/ &_____ &_____ &kp KP_DOT
             >;
         };
 
         symbols_nav {
             bindings = <
-                &kp TILDE &kp GRAVE &kp LBRC &kp RBRC &trans   /**/ &kp INS  &kp PSCRN &kp SLCK  &kp PAUSE_BREAK &kp K_APP
+                &kp TILDE &kp GRAVE &kp LBRC &kp RBRC &_____   /**/ &kp INS  &kp PSCRN &kp SLCK  &kp PAUSE_BREAK &kp K_APP
                 &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp BSLH /**/ &kp LEFT &kp DOWN  &kp UP    &kp RIGHT       &kp SQT
                 &kp PLUS  &kp EQUAL &kp LBKT &kp RBKT &kp PIPE /**/ &kp HOME &kp PG_DN &kp PG_UP &kp END         &kp DQT
                 /* thumb keys */
-                &trans &trans &trans /**/ &trans &trans &trans
+                &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
         };
 
         mouse_media{
             bindings = <
-                &trans &trans &trans &trans &trans /**/ &trans     &kp C_BRI_DN &kp C_BRI_UP &trans     &trans
-                &trans &trans &trans &trans &trans /**/ &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP
-                &trans &trans &trans &trans &trans /**/ &trans     &trans       &trans       &trans     &trans
+                &_____ &_____ &_____ &_____ &_____ /**/ &_____     &kp C_BRI_DN &kp C_BRI_UP &_____     &_____
+                &_____ &_____ &_____ &_____ &_____ /**/ &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP
+                &_____ &_____ &_____ &_____ &_____ /**/ &_____     &_____       &_____       &_____     &_____
                 /* thumb keys */
-                &trans &trans &trans /**/ &trans &trans &trans
+                &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
         };
 
         shortcuts {
             bindings = <
-                &trans           &kp LG(LC(LEFT)) &kp LG(UP)   &kp LG(LC(RIGHT)) &trans            /**/ &trans &kp F19 &kp F20 &kp F21 &kp F23
-                &kp LG(LS(LEFT)) &kp LG(LEFT)     &kp LG(DOWN) &kp LG(RIGHT)     &kp LG(LS(RIGHT)) /**/ &trans &kp F16 &kp F17 &kp F18 &kp F22
-                &trans           &trans           &kp LC(C)    &kp LC(V)         &kp LG(LS(A))     /**/ &trans &kp F13 &kp F14 &kp F15 &kp F24
+                &_____           &kp LG(LC(LEFT)) &kp LG(UP)   &kp LG(LC(RIGHT)) &_____            /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23
+                &kp LG(LS(LEFT)) &kp LG(LEFT)     &kp LG(DOWN) &kp LG(RIGHT)     &kp LG(LS(RIGHT)) /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22
+                &_____           &_____           &kp LC(C)    &kp LC(V)         &kp LG(LS(A))     /**/ &_____ &kp F13 &kp F14 &kp F15 &kp F24
                 /* thumb keys */
-                &trans &trans &trans /**/ &trans &trans &trans
+                &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
         };
 
         config {
             bindings = <
-                &trans       &trans &trans &trans &trans /**/ &trans     &trans       &trans       &trans       &trans
-                &trans       &trans &trans &trans &trans /**/ &trans     &bt BT_SEL 3 &trans       &trans       &trans
-                &out OUT_USB &trans &trans &trans &trans /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE
+                &_____       &_____ &_____ &_____ &_____ /**/ &_____     &_____       &_____       &_____       &_____
+                &_____       &_____ &_____ &_____ &_____ /**/ &_____     &bt BT_SEL 3 &_____       &_____       &_____
+                &out OUT_USB &_____ &_____ &_____ &_____ /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE
                 /* thumb keys */
-                &trans &reset &bootloader /**/ &bootloader &reset &trans
+                &_____ &reset &bootloader /**/ &bootloader &reset &_____
             >;
         };
 
