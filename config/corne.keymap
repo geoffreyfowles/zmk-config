@@ -84,6 +84,12 @@
         COMBO_MOD(RALT, 21 33)
         COMBO_MOD(RGUI, 22 34)
 
+        combo_lock {
+            key-positions = <4 5>;  // inner upper and upper left index
+            bindings = <&kp LG(L)>;
+            layers = <_DEFAULT>;
+        };
+
         combo_search_key {
             key-positions = <16 17>;  // inner home and home left index
             bindings = <&kp C_AC_SEARCH>;
@@ -158,7 +164,7 @@
                 _____ &kp A &kp R &kp S &kp T &kp G /**/ &kp M &kp N &kp E     &kp I   &kp O    _____
                 _____ &kp Z &kp X &kp C &kp D &kp V /**/ &kp K &kp H &kp COMMA &kp DOT &kp FSLH _____
                 /* thumb keys */
-                &mt LG(L) ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYMBOLS_NAV BSPC &kp DEL
+                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYMBOLS_NAV BSPC &kp DEL
             >;
         };
 
@@ -168,7 +174,7 @@
                 _____ &kp O    &kp I   &kp E     &kp N &kp M /**/ &kp G &kp T &kp S &kp R &kp A _____
                 _____ &kp FSLH &kp DOT &kp COMMA &kp H &kp K /**/ &kp V &kp D &kp C &kp X &kp Z _____
                 /* thumb keys */
-                &kp DEL &lt _SYMBOLS_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &mt LG(L) ESC
+                &kp DEL &lt _SYMBOLS_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &kp ESC
             >;
         };
 
