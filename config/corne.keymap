@@ -224,9 +224,9 @@
 
         symbols_nav {
             bindings = <
-                _____ &kp PLUS  &kp EQUAL &kp LBRC &kp RBRC &trans   /**/ &kp INS  &kp PSCRN &kp SLCK  &kp PAUSE_BREAK &kp K_APP _____
+                _____ &kp TILDE &kp GRAVE &kp LBRC &kp RBRC &trans   /**/ &kp INS  &kp PSCRN &kp SLCK  &kp PAUSE_BREAK &kp K_APP _____
                 _____ &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp BSLH /**/ &kp LEFT &kp DOWN  &kp UP    &kp RIGHT       &kp SQT   _____
-                _____ &kp TILDE &kp GRAVE &kp LBKT &kp RBKT &kp PIPE /**/ &kp HOME &kp PG_DN &kp PG_UP &kp END         &kp DQT   _____
+                _____ &kp PLUS  &kp EQUAL &kp LBKT &kp RBKT &kp PIPE /**/ &kp HOME &kp PG_DN &kp PG_UP &kp END         &kp DQT   _____
                 /* thumb keys */
                 &trans &trans &trans /**/ &trans &trans &trans
             >;
