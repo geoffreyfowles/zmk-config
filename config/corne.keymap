@@ -13,15 +13,16 @@
 
 #define _DEFAULT 0
 #define _DEFAULT_MIRRORED 1
-#define _GAMING 2
-#define _GAMING_MIRRORED 3
-#define _GAMING_NUM 4
-#define _GAMING_FN 5
-#define _NUM_FN 6
-#define _SYMBOLS_NAV 7
-#define _MOUSE_MEDIA 8
-#define _SHORTCUTS 9
-#define _CONFIG 10
+#define _QWERTY 2
+#define _GAMING 3
+#define _GAMING_MIRRORED 4
+#define _GAMING_NUM 5
+#define _GAMING_FN 6
+#define _NUM_FN 7
+#define _SYMBOLS_NAV 8
+#define _MOUSE_MEDIA 9
+#define _SHORTCUTS 10
+#define _CONFIG 11
 
 #define COMBO_STICKY_MOD(MOD, KEY_POSITIONS) \
     combo_sticky_mod_##MOD { \
@@ -188,6 +189,16 @@
             >;
         };
 
+        qwerty {
+            bindings = <
+                &kp Q &kp W &kp E &kp R &kp T /**/ &kp Y &kp U &kp I     &kp O   &kp P
+                &kp A &kp S &kp D &kp F &kp G /**/ &kp H &kp J &kp K     &kp L   &kp SEMI
+                &kp Z &kp X &kp C &kp V &kp B /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH
+                /* thumb keys */
+                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYMBOLS_NAV BSPC &kp DEL
+            >;
+        };
+
         gaming {
             bindings = <
                 &kp TAB   &kp Q &kp W &kp E &kp R /**/ &kp Y &kp U &kp I     &kp O   &kp P
@@ -270,9 +281,9 @@
 
         config {
             bindings = <
-                &_____       &_____ &_____ &_____ &_____ /**/ &_____     &_____       &_____       &_____       &_____
-                &_____       &_____ &_____ &_____ &_____ /**/ &_____     &bt BT_SEL 3 &_____       &_____       &_____
-                &out OUT_USB &_____ &_____ &_____ &_____ /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE
+                &_____       &_____ &_____      &_____       &_____ /**/ &_____     &_____       &_____       &_____       &_____
+                &_____       &_____ &_____      &_____       &_____ /**/ &_____     &bt BT_SEL 3 &_____       &_____       &_____
+                &out OUT_USB &_____ &to _QWERTY &to _DEFAULT &_____ /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE
                 /* thumb keys */
                 &_____ &reset &bootloader /**/ &bootloader &reset &_____
             >;
