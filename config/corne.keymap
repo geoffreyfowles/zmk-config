@@ -119,9 +119,15 @@
         };
 
         combo_gaming {
-            key-positions = <6 7>;  // upper and upper-outer R2
-            bindings = <&tog _GAMING>;
-            layers = <_DEFAULT _GAMING>;
+            key-positions = <18 19>;  // home and home-outer R2
+            bindings = <&to _GAMING>;
+            layers = <_DEFAULT>;
+        };
+
+        combo_un_gaming {
+            key-positions = <19 20>;  // home R2+R3
+            bindings = <&to _DEFAULT>;
+            layers = <_GAMING>;
         };
 
         combo_gaming_mirrored {
