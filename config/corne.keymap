@@ -85,53 +85,53 @@
         COMBO_MOD(RGUI, 22 34)
 
         combo_lock {
-            key-positions = <4 5>;  // inner upper and upper left index
+            key-positions = <4 5>;  // upper and upper-outer L2
             bindings = <&kp LG(L)>;
             layers = <_DEFAULT>;
         };
 
         combo_search_key {
-            key-positions = <16 17>;  // inner home and home left index
+            key-positions = <16 17>;  // home and home-outer L2
             bindings = <&kp C_AC_SEARCH>;
             layers = <_DEFAULT>;
         };
 
         combo_config {
-            key-positions = <36 41>;  // inner thumbs
+            key-positions = <36 41>;  // inner L1+R1
             bindings = <&mo _CONFIG>;
         };
 
         combo_caps_word {
-            key-positions = <37 40>;  // home thumbs
+            key-positions = <37 40>;  // home L1+R1
             bindings = <&caps_word>;
         };
 
         combo_default_mirrored_l {
-            key-positions = <37 38>;  // home and outer left thumb
+            key-positions = <37 38>;  // home and outer L1
             bindings = <&sl _DEFAULT_MIRRORED>;
             layers = <_DEFAULT>;
         };
 
         combo_default_mirrored_r {
-            key-positions = <39 40>;  // home and outer right thumb
+            key-positions = <39 40>;  // home and outer R1
             bindings = <&sl _DEFAULT_MIRRORED>;
             layers = <_DEFAULT>;
         };
 
         combo_gaming {
-            key-positions = <6 7>;  // inner top and top right index
+            key-positions = <6 7>;  // upper and upper-outer R2
             bindings = <&tog _GAMING>;
             layers = <_DEFAULT _GAMING>;
         };
 
         combo_gaming_mirrored {
-            key-positions = <37 38>;  // home and outer left thumb
+            key-positions = <37 38>;  // home and outer L1
             bindings = <&sl _GAMING_MIRRORED>;
             layers = <_GAMING>;
         };
 
         combo_gaming_alt {
-            key-positions = <36 37>;  // inner and home left thumb
+            key-positions = <36 37>;  // home and inner L1
             bindings = <&kp LALT>;
             layers = <_GAMING>;
         };
