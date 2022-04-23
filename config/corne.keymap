@@ -231,9 +231,9 @@
 
         gaming_fn {
             bindings = <
-                &kp F11 &kp F9 &kp F8 &kp F7 &_____    /**/ &_____ &_____ &_____ &_____ &_____
-                &kp F10 &kp F6 &kp F5 &kp F4 &kp ESC   /**/ &_____ &_____ &_____ &_____ &_____
-                &kp F12 &kp F3 &kp F2 &kp F1 &kp GRAVE /**/ &_____ &_____ &_____ &_____ &_____
+                &kp F11 &kp F9 &kp F8 &kp F7 &_____    /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23
+                &kp F10 &kp F6 &kp F5 &kp F4 &kp ESC   /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22
+                &kp F12 &kp F3 &kp F2 &kp F1 &kp GRAVE /**/ &_____ &kp F13 &kp F14 &kp F15 &kp F24
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
