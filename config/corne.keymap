@@ -51,10 +51,6 @@
 };
 
 / {
-    chosen {
-        zmk,matrix_transform = &five_column_transform;
-    };
-
     behaviors {
         tpoml_ht: tpoml_ht {  /* workaround for lack of mouse keys */
             compatible = "zmk,behavior-hold-tap";
@@ -171,9 +167,9 @@
 
         default {
             bindings = <
-                &kp Q &kp W &kp F &kp P &kp B /**/ &kp J &kp L &kp U     &kp Y   &kp SEMI
-                &kp A &kp R &kp S &kp T &kp G /**/ &kp M &kp N &kp E     &kp I   &kp O
-                &kp Z &kp X &kp C &kp D &kp V /**/ &kp K &kp H &kp COMMA &kp DOT &kp FSLH
+                &none &kp Q &kp W &kp F &kp P &kp B /**/ &kp J &kp L &kp U     &kp Y   &kp SEMI &none
+                &none &kp A &kp R &kp S &kp T &kp G /**/ &kp M &kp N &kp E     &kp I   &kp O    &none
+                &none &kp Z &kp X &kp C &kp D &kp V /**/ &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
                 &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYMBOLS_NAV BSPC &kp DEL
             >;
@@ -181,9 +177,9 @@
 
         default_mirrored {
             bindings = <
-                &kp SEMI &kp Y   &kp U     &kp L &kp J /**/ &kp B &kp P &kp F &kp W &kp Q
-                &kp O    &kp I   &kp E     &kp N &kp M /**/ &kp G &kp T &kp S &kp R &kp A
-                &kp FSLH &kp DOT &kp COMMA &kp H &kp K /**/ &kp V &kp D &kp C &kp X &kp Z
+                &none &kp SEMI &kp Y   &kp U     &kp L &kp J /**/ &kp B &kp P &kp F &kp W &kp Q &none
+                &none &kp O    &kp I   &kp E     &kp N &kp M /**/ &kp G &kp T &kp S &kp R &kp A &none
+                &none &kp FSLH &kp DOT &kp COMMA &kp H &kp K /**/ &kp V &kp D &kp C &kp X &kp Z &none
                 /* thumb keys */
                 &kp DEL &lt _SYMBOLS_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &kp ESC
             >;
@@ -191,9 +187,9 @@
 
         qwerty {
             bindings = <
-                &kp Q &kp W &kp E &kp R &kp T /**/ &kp Y &kp U &kp I     &kp O   &kp P
-                &kp A &kp S &kp D &kp F &kp G /**/ &kp H &kp J &kp K     &kp L   &kp SEMI
-                &kp Z &kp X &kp C &kp V &kp B /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH
+                &none &kp Q &kp W &kp E &kp R &kp T /**/ &kp Y &kp U &kp I     &kp O   &kp P    &none
+                &none &kp A &kp S &kp D &kp F &kp G /**/ &kp H &kp J &kp K     &kp L   &kp SEMI &none
+                &none &kp Z &kp X &kp C &kp V &kp B /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
                 &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYMBOLS_NAV BSPC &kp DEL
             >;
@@ -201,9 +197,9 @@
 
         gaming {
             bindings = <
-                &kp TAB   &kp Q &kp W &kp E &kp R /**/ &kp Y &kp U &kp I     &kp O   &kp P
-                &kp LSHFT &kp A &kp S &kp D &kp F /**/ &kp H &kp J &kp K     &kp L   &kp SEMI
-                &kp LCTRL &kp Z &kp X &kp C &kp V /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH
+                &none &kp TAB   &kp Q &kp W &kp E &kp R /**/ &kp Y &kp U &kp I     &kp O   &kp P    &none
+                &none &kp LSHFT &kp A &kp S &kp D &kp F /**/ &kp H &kp J &kp K     &kp L   &kp SEMI &none
+                &none &kp LCTRL &kp Z &kp X &kp C &kp V /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
                 &mo _GAMING_FN &kp SPACE &mo _GAMING_NUM /**/ &_____ &_____ &_____
             >;
@@ -211,9 +207,9 @@
 
         gaming_mirrored {
             bindings = <
-                &kp P    &kp O   &kp I     &kp U &kp Y /**/ &kp R &kp E &kp W &kp Q &kp TAB
-                &kp SEMI &kp L   &kp K     &kp J &kp H /**/ &kp F &kp D &kp S &kp A &kp LSHFT
-                &kp FSLH &kp DOT &kp COMMA &kp M &kp N /**/ &kp V &kp C &kp X &kp Z &kp LCTRL
+                &none &kp P    &kp O   &kp I     &kp U &kp Y /**/ &kp R &kp E &kp W &kp Q &kp TAB   &none
+                &none &kp SEMI &kp L   &kp K     &kp J &kp H /**/ &kp F &kp D &kp S &kp A &kp LSHFT &none
+                &none &kp FSLH &kp DOT &kp COMMA &kp M &kp N /**/ &kp V &kp C &kp X &kp Z &kp LCTRL &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &mo _GAMING_NUM &kp SPACE &mo _GAMING_FN
             >;
@@ -221,9 +217,9 @@
 
         gaming_num {
             bindings = <
-                &kp MINUS &kp N9 &kp N8 &kp N7 &kp T /**/ &_____     &kp KP_N7 &kp KP_N8 &kp KP_N9 &_____
-                &kp N0    &kp N6 &kp N5 &kp N4 &kp G /**/ &kp KP_NUM &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N0
-                &kp EQUAL &kp N3 &kp N2 &kp N1 &kp B /**/ &_____     &kp KP_N1 &kp KP_N2 &kp KP_N3 &_____
+                &none &kp MINUS &kp N9 &kp N8 &kp N7 &kp T /**/ &_____     &kp KP_N7 &kp KP_N8 &kp KP_N9 &_____    &none
+                &none &kp N0    &kp N6 &kp N5 &kp N4 &kp G /**/ &kp KP_NUM &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_N0 &none
+                &none &kp EQUAL &kp N3 &kp N2 &kp N1 &kp B /**/ &_____     &kp KP_N1 &kp KP_N2 &kp KP_N3 &_____    &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
@@ -231,9 +227,9 @@
 
         gaming_fn {
             bindings = <
-                &kp F11 &kp F9 &kp F8 &kp F7 &_____    /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23
-                &kp F10 &kp F6 &kp F5 &kp F4 &kp ESC   /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22
-                &kp F12 &kp F3 &kp F2 &kp F1 &kp GRAVE /**/ &_____ &kp F13 &kp F14 &kp F15 &kp F24
+                &none &kp F11 &kp F9 &kp F8 &kp F7 &_____    /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23 &none
+                &none &kp F10 &kp F6 &kp F5 &kp F4 &kp ESC   /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22 &none
+                &none &kp F12 &kp F3 &kp F2 &kp F1 &kp GRAVE /**/ &_____ &kp F13 &kp F14 &kp F15 &kp F24 &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
@@ -241,9 +237,9 @@
 
         num_fn {
             bindings = <
-                &kp F11 &kp F9 &kp F8 &kp F7 &_____ /**/ &_____ &kp N7 &kp N8 &kp N9 &_____
-                &kp F10 &kp F6 &kp F5 &kp F4 &_____ /**/ &_____ &kp N4 &kp N5 &kp N6 &kp N0
-                &kp F12 &kp F3 &kp F2 &kp F1 &_____ /**/ &_____ &kp N1 &kp N2 &kp N3 &_____
+                &none &kp F11 &kp F9 &kp F8 &kp F7 &_____ /**/ &_____ &kp N7 &kp N8 &kp N9 &_____ &none
+                &none &kp F10 &kp F6 &kp F5 &kp F4 &_____ /**/ &_____ &kp N4 &kp N5 &kp N6 &kp N0 &none
+                &none &kp F12 &kp F3 &kp F2 &kp F1 &_____ /**/ &_____ &kp N1 &kp N2 &kp N3 &_____ &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &kp KP_DOT
             >;
@@ -251,9 +247,9 @@
 
         symbols_nav {
             bindings = <
-                &kp TILDE &kp GRAVE &kp LBRC &kp RBRC &_____   /**/ &kp INS  &kp PSCRN &kp SLCK  &kp PAUSE_BREAK &kp K_APP
-                &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp BSLH /**/ &kp LEFT &kp DOWN  &kp UP    &kp RIGHT       &kp SQT
-                &kp PLUS  &kp EQUAL &kp LBKT &kp RBKT &kp PIPE /**/ &kp HOME &kp PG_DN &kp PG_UP &kp END         &kp DQT
+                &none &kp TILDE &kp GRAVE &kp LBRC &kp RBRC &_____   /**/ &kp INS  &kp PSCRN &kp SLCK  &kp PAUSE_BREAK &kp K_APP &none
+                &none &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp BSLH /**/ &kp LEFT &kp DOWN  &kp UP    &kp RIGHT       &kp SQT   &none
+                &none &kp PLUS  &kp EQUAL &kp LBKT &kp RBKT &kp PIPE /**/ &kp HOME &kp PG_DN &kp PG_UP &kp END         &kp DQT   &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
@@ -261,9 +257,9 @@
 
         mouse_media{
             bindings = <
-                &_____ &_____ &_____ &_____ &_____ /**/ &_____     &kp C_BRI_DN &kp C_BRI_UP &_____     &_____
-                &_____ &_____ &_____ &_____ &_____ /**/ &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP
-                &_____ &_____ &_____ &_____ &_____ /**/ &_____     &_____       &_____       &_____     &_____
+                &none &_____ &_____ &_____ &_____ &_____ /**/ &_____     &kp C_BRI_DN &kp C_BRI_UP &_____     &_____   &none
+                &none &_____ &_____ &_____ &_____ &_____ /**/ &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP &none
+                &none &_____ &_____ &_____ &_____ &_____ /**/ &_____     &_____       &_____       &_____     &_____   &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
@@ -271,9 +267,9 @@
 
         shortcuts {
             bindings = <
-                &_____           &kp LG(LC(LEFT)) &kp LG(UP)   &kp LG(LC(RIGHT)) &_____            /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23
-                &kp LG(LS(LEFT)) &kp LG(LEFT)     &kp LG(DOWN) &kp LG(RIGHT)     &kp LG(LS(RIGHT)) /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22
-                &_____           &_____           &kp LC(C)    &kp LC(V)         &kp LG(LS(A))     /**/ &_____ &kp F13 &kp F14 &kp F15 &kp F24
+                &none &_____           &kp LG(LC(LEFT)) &kp LG(UP)   &kp LG(LC(RIGHT)) &_____            /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23 &none
+                &none &kp LG(LS(LEFT)) &kp LG(LEFT)     &kp LG(DOWN) &kp LG(RIGHT)     &kp LG(LS(RIGHT)) /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22 &none
+                &none &_____           &_____           &kp LC(C)    &kp LC(V)         &kp LG(LS(A))     /**/ &_____ &kp F13 &kp F14 &kp F15 &kp F24 &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
@@ -281,9 +277,9 @@
 
         config {
             bindings = <
-                &_____       &_____ &_____      &_____       &_____ /**/ &_____     &_____       &_____       &_____       &_____
-                &_____       &_____ &_____      &_____       &_____ /**/ &_____     &bt BT_SEL 3 &_____       &_____       &_____
-                &out OUT_USB &_____ &to _QWERTY &to _DEFAULT &_____ /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE
+                &none &_____       &_____ &_____      &_____       &_____ /**/ &_____     &_____       &_____       &_____       &_____       &none
+                &none &_____       &_____ &_____      &_____       &_____ /**/ &_____     &bt BT_SEL 3 &_____       &_____       &_____       &none
+                &none &out OUT_USB &_____ &to _QWERTY &to _DEFAULT &_____ /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE &none
                 /* thumb keys */
                 &_____ &reset &bootloader /**/ &bootloader &reset &_____
             >;
