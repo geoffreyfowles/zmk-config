@@ -11,31 +11,31 @@
 
 #define _____ trans
 
-#define _DEFAULT 0
-#define _DEFAULT_MIRRORED 1
+#define _BASE 0
+#define _BASE_MIR 1
 #define _QWERTY 2
 #define _GAMING 3
-#define _GAMING_MIRRORED 4
-#define _GAMING_NUM 5
-#define _GAMING_FN 6
+#define _GAM_MIR 4
+#define _GAM_NUM 5
+#define _GAM_FN 6
 #define _NUM_FN 7
-#define _SYMBOLS_NAV 8
-#define _MOUSE_MEDIA 9
-#define _SHORTCUTS 10
+#define _SYM_NAV 8
+#define _SHORTCUTS 9
+#define _MOUSE_MEDIA 10
 #define _CONFIG 11
 
 #define COMBO_STICKY_MOD(MOD, KEY_POSITIONS) \
     combo_sticky_mod_##MOD { \
         bindings = <&sk MOD>; \
         key-positions = <KEY_POSITIONS>; \
-        layers = <_DEFAULT _DEFAULT_MIRRORED>; \
+        layers = <_BASE _BASE_MIR>; \
     };
 
 #define COMBO_MOD(MOD, KEY_POSITIONS) \
     combo_mod_##MOD { \
         bindings = <&kp MOD>; \
         key-positions = <KEY_POSITIONS>; \
-        layers = <_DEFAULT _DEFAULT_MIRRORED _NUM_FN _SYMBOLS_NAV _MOUSE_MEDIA _SHORTCUTS>; \
+        layers = <_BASE _BASE_MIR _NUM_FN _SYM_NAV _MOUSE_MEDIA _SHORTCUTS>; \
     };
 
 &sk {
@@ -88,13 +88,13 @@
         combo_lock {
             key-positions = <4 5>;  // upper and upper-outer L2
             bindings = <&kp LG(L)>;
-            layers = <_DEFAULT>;
+            layers = <_BASE>;
         };
 
         combo_search_key {
             key-positions = <16 17>;  // home and home-outer L2
             bindings = <&kp C_AC_SEARCH>;
-            layers = <_DEFAULT>;
+            layers = <_BASE>;
         };
 
         combo_config {
@@ -109,31 +109,31 @@
 
         combo_default_mirrored_l {
             key-positions = <37 38>;  // home and outer L1
-            bindings = <&sl _DEFAULT_MIRRORED>;
-            layers = <_DEFAULT>;
+            bindings = <&sl _BASE_MIR>;
+            layers = <_BASE>;
         };
 
         combo_default_mirrored_r {
             key-positions = <39 40>;  // home and outer R1
-            bindings = <&sl _DEFAULT_MIRRORED>;
-            layers = <_DEFAULT>;
+            bindings = <&sl _BASE_MIR>;
+            layers = <_BASE>;
         };
 
         combo_gaming {
             key-positions = <18 19>;  // home and home-outer R2
             bindings = <&to _GAMING>;
-            layers = <_DEFAULT>;
+            layers = <_BASE>;
         };
 
         combo_un_gaming {
             key-positions = <19 20>;  // home R2+R3
-            bindings = <&to _DEFAULT>;
+            bindings = <&to _BASE>;
             layers = <_GAMING>;
         };
 
         combo_gaming_mirrored {
             key-positions = <37 38>;  // home and outer L1
-            bindings = <&sl _GAMING_MIRRORED>;
+            bindings = <&sl _GAM_MIR>;
             layers = <_GAMING>;
         };
 
@@ -165,23 +165,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default {
+        base {
             bindings = <
                 &none &kp Q &kp W &kp F &kp P &kp B /**/ &kp J &kp L &kp U     &kp Y   &kp SEMI &none
                 &none &kp A &kp R &kp S &kp T &kp G /**/ &kp M &kp N &kp E     &kp I   &kp O    &none
                 &none &kp Z &kp X &kp C &kp D &kp V /**/ &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYMBOLS_NAV BSPC &kp DEL
+                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYM_NAV BSPC &kp DEL
             >;
         };
 
-        default_mirrored {
+        base_mirrored {
             bindings = <
                 &none &kp SEMI &kp Y   &kp U     &kp L &kp J /**/ &kp B &kp P &kp F &kp W &kp Q &none
                 &none &kp O    &kp I   &kp E     &kp N &kp M /**/ &kp G &kp T &kp S &kp R &kp A &none
                 &none &kp FSLH &kp DOT &kp COMMA &kp H &kp K /**/ &kp V &kp D &kp C &kp X &kp Z &none
                 /* thumb keys */
-                &kp DEL &lt _SYMBOLS_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &kp ESC
+                &kp DEL &lt _SYM_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &kp ESC
             >;
         };
 
@@ -191,7 +191,7 @@
                 &none &kp A &kp S &kp D &kp F &kp G /**/ &kp H &kp J &kp K     &kp L   &kp SEMI &none
                 &none &kp Z &kp X &kp C &kp V &kp B /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYMBOLS_NAV BSPC &kp DEL
+                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYM_NAV BSPC &kp DEL
             >;
         };
 
@@ -201,7 +201,7 @@
                 &none &kp LSHFT &kp A &kp S &kp D &kp F /**/ &kp H &kp J &kp K     &kp L   &kp SEMI &none
                 &none &kp LCTRL &kp Z &kp X &kp C &kp V /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &mo _GAMING_FN &kp SPACE &mo _GAMING_NUM /**/ &_____ &_____ &_____
+                &mo _GAM_FN &kp SPACE &mo _GAM_NUM /**/ &_____ &_____ &_____
             >;
         };
 
@@ -211,7 +211,7 @@
                 &none &kp SEMI &kp L   &kp K     &kp J &kp H /**/ &kp F &kp D &kp S &kp A &kp LSHFT &none
                 &none &kp FSLH &kp DOT &kp COMMA &kp M &kp N /**/ &kp V &kp C &kp X &kp Z &kp LCTRL &none
                 /* thumb keys */
-                &_____ &_____ &_____ /**/ &mo _GAMING_NUM &kp SPACE &mo _GAMING_FN
+                &_____ &_____ &_____ /**/ &mo _GAM_NUM &kp SPACE &mo _GAM_FN
             >;
         };
 
@@ -255,16 +255,6 @@
             >;
         };
 
-        mouse_media{
-            bindings = <
-                &none &_____ &_____ &_____ &_____ &_____ /**/ &_____     &kp C_BRI_DN &kp C_BRI_UP &_____     &_____   &none
-                &none &_____ &_____ &_____ &_____ &_____ /**/ &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP &none
-                &none &_____ &_____ &_____ &_____ &_____ /**/ &_____     &_____       &_____       &_____     &_____   &none
-                /* thumb keys */
-                &_____ &_____ &_____ /**/ &_____ &_____ &_____
-            >;
-        };
-
         shortcuts {
             bindings = <
                 &none &_____           &kp LG(LC(LEFT)) &kp LG(UP)   &kp LG(LC(RIGHT)) &_____            /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23 &none
@@ -275,11 +265,21 @@
             >;
         };
 
+        mouse_media {
+            bindings = <
+                &none &_____ &_____ &_____ &_____ &_____ /**/ &_____     &kp C_BRI_DN &kp C_BRI_UP &_____     &_____   &none
+                &none &_____ &_____ &_____ &_____ &_____ /**/ &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_PP &none
+                &none &_____ &_____ &_____ &_____ &_____ /**/ &_____     &_____       &_____       &_____     &_____   &none
+                /* thumb keys */
+                &_____ &_____ &_____ /**/ &_____ &_____ &_____
+            >;
+        };
+
         config {
             bindings = <
                 &none &_____       &_____ &_____      &_____       &_____ /**/ &_____     &_____       &_____       &_____       &_____       &none
                 &none &_____       &_____ &_____      &_____       &_____ /**/ &_____     &bt BT_SEL 3 &_____       &_____       &_____       &none
-                &none &out OUT_USB &_____ &to _QWERTY &to _DEFAULT &_____ /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE &none
+                &none &out OUT_USB &_____ &to _QWERTY &to _BASE &_____ /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE &none
                 /* thumb keys */
                 &_____ &reset &bootloader /**/ &bootloader &reset &_____
             >;
