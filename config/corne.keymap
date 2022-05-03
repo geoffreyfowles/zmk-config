@@ -201,8 +201,7 @@
                 &none &kp LSHFT &kp A &kp S &kp D &kp F /**/ &kp H &kp J &kp K     &kp L   &kp SEMI &none
                 &none &kp LCTRL &kp Z &kp X &kp C &kp V /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &mo _GAM_FN &kp SPACE &mo _GAM_NUM /**/ &_____ &_____ &_____
-            >;
+                &mo _GAM_FN &kp SPACE &mo _GAM_NUM /**/ &lt _MOUSE_MEDIA ENTER &lt _SYM_NAV BSPC &kp DEL            >;
         };
 
         gaming_mirrored {
@@ -211,7 +210,7 @@
                 &none &kp SEMI &kp L   &kp K     &kp J &kp H /**/ &kp F &kp D &kp S &kp A &kp LSHFT &none
                 &none &kp FSLH &kp DOT &kp COMMA &kp M &kp N /**/ &kp V &kp C &kp X &kp Z &kp LCTRL &none
                 /* thumb keys */
-                &_____ &_____ &_____ /**/ &mo _GAM_NUM &kp SPACE &mo _GAM_FN
+                &kp DEL &lt _SYM_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &mo _GAM_NUM &kp SPACE &mo _GAM_FN
             >;
         };
 
