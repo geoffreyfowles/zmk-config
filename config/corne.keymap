@@ -160,6 +160,32 @@
                 <&macro_tap &kp PAUSE_BREAK>
                 ;
         };
+
+        win_l: win_l {  // HACK fix buggy LG(LEFT) behaviour
+            compatible = "zmk,behavior-macro";
+            label = "win_l";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LGUI>,
+                <&macro_tap &kp LEFT>,
+                <&macro_release &kp LGUI>
+                ;
+        };
+
+        win_r: win_r {  // HACK fix buggy LG(RIGHT) behaviour
+            compatible = "zmk,behavior-macro";
+            label = "win_r";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings =
+                <&macro_press &kp LGUI>,
+                <&macro_tap &kp RIGHT>,
+                <&macro_release &kp LGUI>
+                ;
+        };
     };
 
     keymap {
@@ -257,7 +283,7 @@
         shortcuts {
             bindings = <
                 &none &_____           &kp LG(LC(LEFT)) &kp LG(UP)   &kp LG(LC(RIGHT)) &_____            /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23 &none
-                &none &kp LG(LS(LEFT)) &kp LG(LEFT)     &kp LG(DOWN) &kp LG(RIGHT)     &kp LG(LS(RIGHT)) /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22 &none
+                &none &kp LG(LS(LEFT)) &win_l           &kp LG(DOWN) &win_r            &kp LG(LS(RIGHT)) /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22 &none
                 &none &_____           &_____           &kp LC(C)    &kp LC(V)         &kp LG(LS(A))     /**/ &_____ &kp F13 &kp F14 &kp F15 &kp F24 &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
