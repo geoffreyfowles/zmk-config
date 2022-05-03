@@ -28,14 +28,14 @@
     combo_sticky_mod_##MOD { \
         bindings = <&sk MOD>; \
         key-positions = <KEY_POSITIONS>; \
-        layers = <_BASE _BASE_MIR>; \
+        layers = <_BASE _BASE_MIR _QWERTY>; \
     };
 
 #define COMBO_MOD(MOD, KEY_POSITIONS) \
     combo_mod_##MOD { \
         bindings = <&kp MOD>; \
         key-positions = <KEY_POSITIONS>; \
-        layers = <_BASE _BASE_MIR _NUM_FN _SYM_NAV _MOUSE_MEDIA _SHORTCUTS>; \
+        layers = <_BASE _BASE_MIR _QWERTY _NUM_FN _SYM_NAV _MOUSE_MEDIA _SHORTCUTS>; \
     };
 
 &sk {
@@ -88,13 +88,13 @@
         combo_lock {
             key-positions = <4 5>;  // upper and upper-outer L2
             bindings = <&kp LG(L)>;
-            layers = <_BASE>;
+            layers = <_BASE _QWERTY>;
         };
 
         combo_search_key {
             key-positions = <16 17>;  // home and home-outer L2
             bindings = <&kp C_AC_SEARCH>;
-            layers = <_BASE>;
+            layers = <_BASE _QWERTY>;
         };
 
         combo_config {
