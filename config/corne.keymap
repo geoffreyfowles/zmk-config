@@ -100,6 +100,7 @@
         combo_config {
             key-positions = <36 41>;  // inner L1+R1
             bindings = <&mo _CONFIG>;
+            timeout-ms = <100>;
         };
 
         combo_caps_word {
