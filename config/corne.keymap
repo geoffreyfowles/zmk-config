@@ -38,6 +38,13 @@
         layers = <_BASE _BASE_MIR _QWERTY _NUM_FN _SYM_NAV _MOUSE_MEDIA _SHORTCUTS>; \
     };
 
+#define COMBO_STANDARD(NAME, BINDINGS, KEY_POSITIONS, LAYERS) \
+    combo_standard_##NAME { \
+        bindings = <BINDINGS>; \
+        key-positions = <KEY_POSITIONS>; \
+        layers = <LAYERS>; \
+    };
+
 &sk {
     release-after-ms = <2000>;
 };
@@ -85,17 +92,16 @@
         COMBO_MOD(RALT, 21 33)
         COMBO_MOD(RGUI, 22 34)
 
-        combo_lock {
-            key-positions = <4 5>;  // upper and upper-outer L2
-            bindings = <&kp LG(L)>;
-            layers = <_BASE _QWERTY>;
-        };
+        COMBO_STANDARD(lock, &kp LG(L), 4 5, _BASE _QWERTY)
+        COMBO_STANDARD(search_key, &kp C_AC_SEARCH, 16 17, _BASE _QWERTY)
 
-        combo_search_key {
-            key-positions = <16 17>;  // home and home-outer L2
-            bindings = <&kp C_AC_SEARCH>;
-            layers = <_BASE _QWERTY>;
-        };
+        COMBO_STANDARD(base_mirrored_l, &sl _BASE_MIR, 37 38, _BASE)
+        COMBO_STANDARD(base_mirrored_r, &sl _BASE_MIR, 39 40, _BASE)
+
+        COMBO_STANDARD(base_to_gaming, &to _GAMING, 18 19, _BASE)
+        COMBO_STANDARD(gaming_to_base, &to _BASE, 19 20, _GAMING)
+        COMBO_STANDARD(gaming_alt, &kp LALT, 36 37, _GAMING)
+        COMBO_STANDARD(gaming_mirrored, &sl _GAM_MIR, 37 38, _GAMING)
 
         combo_config {
             key-positions = <36 41>;  // inner L1+R1
@@ -106,42 +112,6 @@
         combo_caps_word {
             key-positions = <37 40>;  // home L1+R1
             bindings = <&caps_word>;
-        };
-
-        combo_default_mirrored_l {
-            key-positions = <37 38>;  // home and outer L1
-            bindings = <&sl _BASE_MIR>;
-            layers = <_BASE>;
-        };
-
-        combo_default_mirrored_r {
-            key-positions = <39 40>;  // home and outer R1
-            bindings = <&sl _BASE_MIR>;
-            layers = <_BASE>;
-        };
-
-        combo_gaming {
-            key-positions = <18 19>;  // home and home-outer R2
-            bindings = <&to _GAMING>;
-            layers = <_BASE>;
-        };
-
-        combo_un_gaming {
-            key-positions = <19 20>;  // home R2+R3
-            bindings = <&to _BASE>;
-            layers = <_GAMING>;
-        };
-
-        combo_gaming_mirrored {
-            key-positions = <37 38>;  // home and outer L1
-            bindings = <&sl _GAM_MIR>;
-            layers = <_GAMING>;
-        };
-
-        combo_gaming_alt {
-            key-positions = <36 37>;  // home and inner L1
-            bindings = <&kp LALT>;
-            layers = <_GAMING>;
         };
 
     };
