@@ -22,7 +22,8 @@
 #define _SYM_NAV 8
 #define _SHORTCUTS_SYM 9
 #define _MOUSE_MEDIA 10
-#define _CONFIG 11
+#define _EXTRA_FN 11
+#define _CONFIG 12
 
 #define COMBO_STICKY_MOD(MOD, KEY_POSITIONS) \
     combo_sticky_mod_##MOD { \
@@ -168,7 +169,7 @@
                 &none &kp A &kp R &kp S &kp T &kp G /**/ &kp M &kp N &kp E     &kp I   &kp O    &none
                 &none &kp Z &kp X &kp C &kp D &kp V /**/ &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS_SYM TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYM_NAV BSPC &kp DEL
+                &lt _EXTRA_FN ESC &lt _NUM_FN SPACE &lt _SHORTCUTS_SYM TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYM_NAV BSPC &kp DEL
             >;
         };
 
@@ -178,7 +179,7 @@
                 &none &kp O    &kp I   &kp E     &kp N &kp M /**/ &kp G &kp T &kp S &kp R &kp A &none
                 &none &kp FSLH &kp DOT &kp COMMA &kp H &kp K /**/ &kp V &kp D &kp C &kp X &kp Z &none
                 /* thumb keys */
-                &kp DEL &lt _SYM_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS_SYM TAB &lt _NUM_FN SPACE &kp ESC
+                &kp DEL &lt _SYM_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS_SYM TAB &lt _NUM_FN SPACE &lt _EXTRA_FN ESC
             >;
         };
 
@@ -188,7 +189,7 @@
                 &none &kp A &kp S &kp D &kp F &kp G /**/ &kp H &kp J &kp K     &kp L   &kp SEMI &none
                 &none &kp Z &kp X &kp C &kp V &kp B /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS_SYM TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYM_NAV BSPC &kp DEL
+                &lt _EXTRA_FN ESC &lt _NUM_FN SPACE &lt _SHORTCUTS_SYM TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYM_NAV BSPC &kp DEL
             >;
         };
 
@@ -198,7 +199,8 @@
                 &none &kp LSHFT &kp A &kp S &kp D &kp F /**/ &kp H &kp J &kp K     &kp L   &kp SEMI &none
                 &none &kp LCTRL &kp Z &kp X &kp C &kp V /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &mo _GAM_FN &kp SPACE &mo _GAM_NUM /**/ &lt _MOUSE_MEDIA ENTER &lt _SYM_NAV BSPC &kp DEL            >;
+                &mo _GAM_FN &kp SPACE &mo _GAM_NUM /**/ &lt _MOUSE_MEDIA ENTER &lt _SYM_NAV BSPC &kp DEL
+            >;
         };
 
         gaming_mirrored {
@@ -268,6 +270,16 @@
                 &none &_____ &_____ &_____ &_____ &_____ /**/ &_____     &_____       &_____       &_____     &_____   &none
                 /* thumb keys */
                 &_____ &kp SPACE &kp TAB /**/ &_____ &_____ &_____
+            >;
+        };
+
+        extra_fn {
+            bindings = <
+                &none &kp F23 &kp F21 &kp F20 &kp F19 &_____ /**/ &_____ &_____ &_____ &_____ &_____ &none
+                &none &kp F22 &kp F18 &kp F17 &kp F16 &_____ /**/ &_____ &_____ &_____ &_____ &_____ &none
+                &none &kp F24 &kp F15 &kp F14 &kp F13 &_____ /**/ &_____ &_____ &_____ &_____ &_____ &none
+                /* thumb keys */
+                &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
         };
 
