@@ -20,7 +20,7 @@
 #define _GAM_FN 6
 #define _NUM_FN 7
 #define _SYM_NAV 8
-#define _SHORTCUTS 9
+#define _SHORTCUTS_SYM 9
 #define _MOUSE_MEDIA 10
 #define _CONFIG 11
 
@@ -35,7 +35,7 @@
     combo_mod_##MOD { \
         bindings = <&kp MOD>; \
         key-positions = <KEY_POSITIONS>; \
-        layers = <_BASE _BASE_MIR _QWERTY _NUM_FN _SYM_NAV _MOUSE_MEDIA _SHORTCUTS>; \
+        layers = <_BASE _BASE_MIR _QWERTY _NUM_FN _SYM_NAV _MOUSE_MEDIA _SHORTCUTS_SYM>; \
     };
 
 #define COMBO_STANDARD(NAME, BINDINGS, KEY_POSITIONS, LAYERS) \
@@ -168,7 +168,7 @@
                 &none &kp A &kp R &kp S &kp T &kp G /**/ &kp M &kp N &kp E     &kp I   &kp O    &none
                 &none &kp Z &kp X &kp C &kp D &kp V /**/ &kp K &kp H &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYM_NAV BSPC &kp DEL
+                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS_SYM TAB /**/ &tpoml_ht 0 ENTER /* workaround for lack of mouse keys */ &lt _SYM_NAV BSPC &kp DEL
             >;
         };
 
@@ -178,7 +178,7 @@
                 &none &kp O    &kp I   &kp E     &kp N &kp M /**/ &kp G &kp T &kp S &kp R &kp A &none
                 &none &kp FSLH &kp DOT &kp COMMA &kp H &kp K /**/ &kp V &kp D &kp C &kp X &kp Z &none
                 /* thumb keys */
-                &kp DEL &lt _SYM_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS TAB &lt _NUM_FN SPACE &kp ESC
+                &kp DEL &lt _SYM_NAV BSPC &lt _MOUSE_MEDIA ENTER /**/ &lt _SHORTCUTS_SYM TAB &lt _NUM_FN SPACE &kp ESC
             >;
         };
 
@@ -188,7 +188,7 @@
                 &none &kp A &kp S &kp D &kp F &kp G /**/ &kp H &kp J &kp K     &kp L   &kp SEMI &none
                 &none &kp Z &kp X &kp C &kp V &kp B /**/ &kp N &kp M &kp COMMA &kp DOT &kp FSLH &none
                 /* thumb keys */
-                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYM_NAV BSPC &kp DEL
+                &kp ESC &lt _NUM_FN SPACE &lt _SHORTCUTS_SYM TAB /**/ &lt _MOUSE_MEDIA ENTER &lt _SYM_NAV BSPC &kp DEL
             >;
         };
 
@@ -251,11 +251,11 @@
             >;
         };
 
-        shortcuts {
+        shortcuts_symbols {
             bindings = <
-                &none &_____           &kp LG(LC(LEFT)) &kp LG(UP)   &kp LG(LC(RIGHT)) &_____            /**/ &_____ &kp F19 &kp F20 &kp F21 &kp F23 &none
-                &none &kp LG(LS(LEFT)) &win_l           &kp LG(DOWN) &win_r            &kp LG(LS(RIGHT)) /**/ &_____ &kp F16 &kp F17 &kp F18 &kp F22 &none
-                &none &_____           &_____           &kp LC(C)    &kp LC(V)         &kp LG(LS(A))     /**/ &_____ &kp F13 &kp F14 &kp F15 &kp F24 &none
+                &none &_____           &kp LG(LC(LEFT)) &kp LG(UP)   &kp LG(LC(RIGHT)) &_____            /**/ &_____ &kp AMPERSAND &kp ASTERISK &_____    &_____ &none
+                &none &kp LG(LS(LEFT)) &win_l           &kp LG(DOWN) &win_r            &kp LG(LS(RIGHT)) /**/ &_____ &kp DOLLAR    &kp PERCENT  &kp CARET &_____ &none
+                &none &_____           &_____           &kp LC(C)    &kp LC(V)         &kp LG(LS(A))     /**/ &_____ &kp EXCL      &kp AT       &kp HASH  &_____ &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
