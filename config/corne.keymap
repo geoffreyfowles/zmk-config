@@ -258,9 +258,9 @@
 
         symbols_nav {
             bindings = <
-                &none &kp TILDE &kp GRAVE &kp LBRC &kp RBRC &_____   /**/ &_____   &kp LESS_THAN &kp GREATER_THAN &kp K_APP &_____  &none
-                &none &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp BSLH /**/ &kp LEFT &kp DOWN      &kp UP           &kp RIGHT &kp SQT &none
-                &none &kp PLUS  &kp EQUAL &kp LBKT &kp RBKT &kp PIPE /**/ &kp HOME &kp PG_DN     &kp PG_UP        &kp END   &kp DQT &none
+                &none &kp TILDE &kp GRAVE &kp LBRC &kp RBRC &_____   /**/ &_____   &kp LT    &kp GT    &kp K_APP &_____  &none
+                &none &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp BSLH /**/ &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &kp SQT &none
+                &none &kp PLUS  &kp EQUAL &kp LBKT &kp RBKT &kp PIPE /**/ &kp HOME &kp PG_DN &kp PG_UP &kp END   &kp DQT &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
@@ -268,9 +268,9 @@
 
         shortcuts_symbols {
             bindings = <
-                &none &_____           &kp LG(LC(LEFT)) &win_up   &kp LG(LC(RIGHT)) &_____            /**/ &kp PSCRN       &kp AMPERSAND &kp ASTERISK &kp INS   &_____       &none
-                &none &kp LG(LS(LEFT)) &win_left        &win_down &win_right        &kp LG(LS(RIGHT)) /**/ &kp SLCK        &kp DOLLAR    &kp PERCENT  &kp CARET &_____       &none
-                &none &_____           &_____           &kp LC(C) &kp LC(V)         &kp LG(LS(A))     /**/ &kp PAUSE_BREAK &kp EXCL      &kp AT       &kp HASH  &kp QUESTION &none
+                &none &_____           &kp LG(LC(LEFT)) &win_up   &kp LG(LC(RIGHT)) &_____            /**/ &kp PSCRN       &kp AMPS &kp STAR  &kp INS   &_____    &none
+                &none &kp LG(LS(LEFT)) &win_left        &win_down &win_right        &kp LG(LS(RIGHT)) /**/ &kp SLCK        &kp DLLR &kp PRCNT &kp CARET &kp COLON &none
+                &none &_____           &_____           &kp LC(C) &kp LC(V)         &kp LG(LS(A))     /**/ &kp PAUSE_BREAK &kp EXCL &kp AT    &kp HASH  &kp QMARK &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
