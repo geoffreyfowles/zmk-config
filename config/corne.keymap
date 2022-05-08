@@ -30,7 +30,6 @@
         bindings = <&sk MOD>; \
         key-positions = <KEY_POSITIONS>; \
         layers = <_BASE _BASE_MIR _QWERTY>; \
-        timeout-ms = <100>; \
     };
 
 #define COMBO_MOD(MOD, KEY_POSITIONS) \
@@ -38,7 +37,6 @@
         bindings = <&kp MOD>; \
         key-positions = <KEY_POSITIONS>; \
         layers = <_BASE _BASE_MIR _QWERTY _NUM_FN _SYM_NAV _MOUSE_MEDIA _SHORTCUTS_SYM>; \
-        timeout-ms = <100>; \
     };
 
 #define COMBO_STANDARD(NAME, BINDINGS, KEY_POSITIONS, LAYERS) \
@@ -46,7 +44,6 @@
         bindings = <BINDINGS>; \
         key-positions = <KEY_POSITIONS>; \
         layers = <LAYERS>; \
-        timeout-ms = <100>; \
     };
 
 &sk {
@@ -121,7 +118,6 @@
         combo_caps_word {
             key-positions = <37 40>;  // home L1+R1
             bindings = <&caps_word>;
-            timeout-ms = <100>; \
         };
 
     };
