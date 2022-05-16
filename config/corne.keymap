@@ -109,6 +109,9 @@
         COMBO_STANDARD(gaming_alt, &kp LALT, 36 37, _GAMING)
         COMBO_STANDARD(gaming_mirrored, &sl _GAM_MIR, 37 38, _GAMING)
 
+        COMBO_STANDARD(win_shift_left, &kp LG(LS(LEFT)), 14 15, _SHORTCUTS_SYM)
+        COMBO_STANDARD(win_shift_right, &kp LG(LS(RIGHT)), 15 16, _SHORTCUTS_SYM)
+
         combo_config {
             key-positions = <36 41>;  // inner L1+R1
             bindings = <&mo _CONFIG>;
@@ -273,9 +276,9 @@
 
         shortcuts_symbols {
             bindings = <
-                &none &_____           &kp LG(LC(LEFT)) &win_up   &kp LG(LC(RIGHT)) &_____            /**/ &kp PSCRN       &kp AMPS &kp STAR  &kp INS   &kp COLON &none
-                &none &kp LG(LS(LEFT)) &win_left        &win_down &win_right        &kp LG(LS(RIGHT)) /**/ &kp SLCK        &kp DLLR &kp PRCNT &kp CARET &_____    &none
-                &none &_____           &_____           &kp LC(C) &kp LC(V)         &kp LG(LS(A))     /**/ &kp PAUSE_BREAK &kp EXCL &kp AT    &kp HASH  &kp QMARK &none
+                &none &_____    &kp LG(LC(LEFT)) &win_up   &kp LG(LC(RIGHT)) &_____        /**/ &kp PSCRN       &kp AMPS &kp STAR  &kp INS   &kp COLON &none
+                &none &_____    &win_left        &win_down &win_right        &_____        /**/ &kp SLCK        &kp DLLR &kp PRCNT &kp CARET &_____    &none
+                &none &kp LC(Z) &kp LC(X)        &kp LC(C) &kp LC(V)         &kp LG(LS(A)) /**/ &kp PAUSE_BREAK &kp EXCL &kp AT    &kp HASH  &kp QMARK &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
             >;
