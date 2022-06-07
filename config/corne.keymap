@@ -306,8 +306,8 @@
 
         config {
             bindings = <
-                &none &_____       &_____ &_____      &_____       &_____ /**/ &_____     &_____       &_____       &_____       &_____       &none
-                &none &_____       &_____ &_____      &_____       &_____ /**/ &_____     &bt BT_SEL 3 &_____       &_____       &_____       &none
+                &none &_____       &_____ &_____      &_____    &_____ /**/ &_____     &_____       &_____       &_____       &_____       &none
+                &none &_____       &_____ &_____      &_____    &_____ /**/ &_____     &bt BT_SEL 3 &_____       &_____       &_____       &none
                 &none &out OUT_USB &_____ &to _QWERTY &to _BASE &_____ /**/ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_BLE &none
                 /* thumb keys */
                 &_____ &reset &bootloader /**/ &bootloader &reset &_____
