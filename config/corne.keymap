@@ -100,11 +100,11 @@
 
         COMBO_STANDARD(lock, &kp LG(L), 4 5, _BASE _QWERTY)
         COMBO_STANDARD(search_key, &kp C_AC_SEARCH, 16 17, _BASE _QWERTY)
+        COMBO_STANDARD(base_to_gaming, &to _GAMING, 28 29, _BASE)
 
         COMBO_STANDARD(base_mirrored_l, &sl _BASE_MIR, 37 38, _BASE)
         COMBO_STANDARD(base_mirrored_r, &sl _BASE_MIR, 39 40, _BASE)
 
-        COMBO_STANDARD(base_to_gaming, &to _GAMING, 18 19, _BASE)
         COMBO_STANDARD(gaming_to_base, &to _BASE, 19 20, _GAMING)
         COMBO_STANDARD(gaming_alt, &kp LALT, 36 37, _GAMING)
         COMBO_STANDARD(gaming_mirrored, &sl _GAM_MIR, 37 38, _GAMING)
