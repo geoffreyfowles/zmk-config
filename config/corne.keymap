@@ -105,7 +105,7 @@
         COMBO_STANDARD(base_mirrored_l, &sl _BASE_MIR, 37 38, _BASE)
         COMBO_STANDARD(base_mirrored_r, &sl _BASE_MIR, 39 40, _BASE)
 
-        COMBO_STANDARD(gaming_to_base, &to _BASE, 19 20, _GAMING)
+        COMBO_STANDARD(gaming_to_base, &to _BASE, 18 19, _GAMING)
         COMBO_STANDARD(gaming_alt, &kp LALT, 36 37, _GAMING)
         COMBO_STANDARD(gaming_mirrored, &sl _GAM_MIR, 37 38, _GAMING)
 
