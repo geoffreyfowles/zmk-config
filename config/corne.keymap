@@ -57,6 +57,7 @@
 
 &lt {
     flavor = "hold-preferred";
+    quick-tap-ms = <200>;
 };
 
 &caps_word {
