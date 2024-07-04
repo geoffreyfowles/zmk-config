@@ -278,7 +278,7 @@
         shortcuts_symbols {
             bindings = <
                 &none &_____    &kp LG(LC(LEFT)) &win_up   &kp LG(LC(RIGHT)) &_____        /**/ &kp PSCRN       &kp AMPS &kp STAR  &kp INS   &_____ &none
-                &none &_____    &win_left        &win_down &win_right        &_____        /**/ &kp SLCK        &kp DLLR &kp PRCNT &kp CARET &_____ &none
+                &none &kp LC(A) &win_left        &win_down &win_right        &_____        /**/ &kp SLCK        &kp DLLR &kp PRCNT &kp CARET &_____ &none
                 &none &kp LC(Z) &kp LC(X)        &kp LC(C) &kp LC(V)         &kp LG(LS(A)) /**/ &kp PAUSE_BREAK &kp EXCL &kp AT    &kp HASH  &_____ &none
                 /* thumb keys */
                 &_____ &_____ &_____ /**/ &_____ &_____ &_____
