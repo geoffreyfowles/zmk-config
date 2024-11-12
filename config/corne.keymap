@@ -28,6 +28,7 @@
 #define COMBO_STICKY_MOD(MOD, KEY_POSITIONS) \
     combo_sticky_mod_##MOD { \
         bindings = <&sk MOD>; \
+        timeout-ms = <200>; \
         key-positions = <KEY_POSITIONS>; \
         layers = <_BASE _BASE_MIR _QWERTY>; \
     };
@@ -35,6 +36,7 @@
 #define COMBO_MOD(MOD, KEY_POSITIONS) \
     combo_mod_##MOD { \
         bindings = <&kp MOD>; \
+        timeout-ms = <200>; \
         key-positions = <KEY_POSITIONS>; \
         layers = <_BASE _BASE_MIR _QWERTY _NUM_FN _SYM_NAV _MOUSE_MEDIA _SHORTCUTS_SYM>; \
     };
@@ -42,6 +44,7 @@
 #define COMBO_STANDARD(NAME, BINDINGS, KEY_POSITIONS, LAYERS) \
     combo_standard_##NAME { \
         bindings = <BINDINGS>; \
+        timeout-ms = <200>; \
         key-positions = <KEY_POSITIONS>; \
         layers = <LAYERS>; \
     };
